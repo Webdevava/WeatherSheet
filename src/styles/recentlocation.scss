@@ -1,0 +1,92 @@
+$raisin-black: #212738ff;
+$bittersweet: #f97068ff;
+$pear: #d1d646ff;
+$antiflash-white: #edf2efff;
+$vivid-sky-blue: #57c4e5ff;
+
+.card {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 150px;
+  height: 150px;
+  color: $antiflash-white;
+  background-color: $antiflash-white;
+  /* From https://css.glass */
+  background: #ffffff00;
+  border-radius: 16px;
+  box-shadow: #32325d40 0px 50px 100px -20px, #0000004d 0px 30px 60px -30px, #0a254059 0px -2px 6px 0px inset;
+  backdrop-filter: blur(7.6px);
+  -webkit-backdrop-filter: blur(7.6px);
+
+  padding: 4px 10px 4px 10px;
+  border-radius: 10px;
+  h3,
+  h2,
+  h4 {
+    width: 100%;
+    text-align: start;
+    text-shadow: 2px 2px 2px $raisin-black;
+    font-weight: lighter;
+  }
+  h2 {
+    display: flex;
+    align-items: center;
+    color: $antiflash-white;
+    text-shadow: 2px 2px 2px $bittersweet;
+    img {
+      height: 40px;
+    }
+  }
+}
+
+@media (max-width:45em) {
+  .card {
+
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    color: $antiflash-white;
+
+    background: #ffffff00;
+    border-radius: 16px;
+    box-shadow: #32325d40 0px 50px 100px -20px, #0000004d 0px 30px 60px -30px, #0a254059 0px -2px 6px 0px inset;
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
+  
+    padding: 4px 10px 4px 10px;
+    border-radius: 10px;
+    h3,
+    h2,
+    h4 {
+      width: 100%;
+      text-align: start;
+      text-shadow: 2px 2px 2px $raisin-black;
+      font-weight: lighter;
+      margin: 4px 10px;
+    }
+
+
+
+    h2 {
+      display: flex;
+      align-items: center;
+      color: $antiflash-white;
+      text-shadow: 2px 2px 2px $bittersweet;
+
+      img {
+        height: 30px;
+      }
+    }
+  }
+}
+
+h3{
+  &::first-letter{
+    text-transform: capitalize;
+  }
+}

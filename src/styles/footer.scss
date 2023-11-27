@@ -1,0 +1,94 @@
+$raisin-black: #212738ff;
+$bittersweet: #f97068ff;
+$pear: #d1d646ff;
+$antiflash-white: #edf2efff;
+$vivid-sky-blue: #57c4e5ff;
+
+
+footer{
+    scroll-snap-align: start;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $raisin-black;
+    color: $antiflash-white;
+    padding: 30px;
+    .lists{
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+        #links{
+            justify-content: space-evenly;
+            gap: 20px;
+            flex-direction: column;
+            
+            li{
+                // width: 100%;
+                text-align: left;
+                text-decoration: underline;
+                font-size: 16px;
+                &:hover{
+                    color: $bittersweet;
+                }
+            }
+            
+        }
+        #icons{
+            flex-direction: row;
+            li{
+                text-align: center;
+                background-color: $antiflash-white;
+                height: 40px;width: 40px;
+                border-radius: 5px;
+                border: 2px solid transparent;
+                margin: 10px;
+                // padding: 3px;
+                transition: all .3s ease-in-out;
+                overflow: hidden;
+
+                &:hover{
+                    border: 2px solid $antiflash-white;
+                    border-radius: 10px;
+                    background-color: $bittersweet;
+                }
+            }
+
+            img{
+                height: 30px;
+                width: 30px;
+                margin: 2px;
+                // border-radius: 50%;
+                // background-color: $antiflash-white;
+
+            }
+   
+        }
+    }
+    p{
+        margin-top: 30px;
+        font-size: 14px;
+    }
+    .love{
+        color: $bittersweet;
+    }
+}
+
+@media (max-width:45em) {
+    .lists{
+        flex-direction: column;
+        ul{
+            display: flex;justify-content: center;align-items: center;
+            // width: 100%;
+            margin: 20px;
+            li{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+.centered {
+    display: flex;
+    align-items: center;
+  }

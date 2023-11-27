@@ -1,0 +1,227 @@
+$raisin-black: #212738ff;
+$bittersweet: #f97068ff;
+$pear: #d1d646ff;
+$antiflash-white: #edf2efff;
+$vivid-sky-blue: #57c4e5ff;
+
+header {
+  width: 100%;
+  height: fit-content;
+  // min-height: 100vh;
+  flex-direction: column;
+  // justify-content: center;
+  
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  scroll-snap-align: start;
+
+
+  &::before {
+    background: linear-gradient(
+      left bottom,
+      left top,
+      from(#0f0f0f00),
+      to(#111)
+    );
+    background: linear-gradient(0deg, hsla(0, 0%, 6%, 0), #111);
+    content: "";
+    height: 120px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  nav {
+    justify-content: center;
+    z-index: 99;
+    width: 100%;
+    padding: 10px 50px;
+    margin-bottom: 100px;
+    justify-content: space-between;
+    .logo {
+      user-select: none;
+      img {
+        height: 60px;
+        padding: 5px;
+        background-color: #2127386e;
+        border-radius: 50%;
+        box-shadow: 0 4px 30px $raisin-black;
+        backdrop-filter: blur(7.6px);
+        -webkit-backdrop-filter: blur(7.6px);
+      }
+      span {
+        font-size: 24px;
+        text-shadow: 2px 2px 2px $raisin-black;
+        color: $antiflash-white;
+      }
+    }
+
+    .local {
+      color: $antiflash-white;
+      justify-content: center;
+      gap: 5px;
+      border-radius: 10px;
+      padding: 5px 10px;
+      // box-shadow: 0 4px 30px $raisin-black;
+      backdrop-filter: blur(7.6px);
+      -webkit-backdrop-filter: blur(7.6px);
+
+      img {
+        height: 200%;
+        rotate: -30deg;
+      }
+      span {
+        font-size: 18px;
+        font-weight: 200;
+        &::first-letter {
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+  .inputLocation {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    .input {
+      height: 50px;
+      width: 50%;
+      margin: 50px;
+      justify-content: center;
+      background-color: $antiflash-white;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: #00000073 0px 25px 20px -20px;
+     
+
+      input {
+        height: 100%;
+        outline: none;
+        border: none;
+        padding: 5px 10px;
+        font-size: 18px;
+        flex: 6;
+        height: 100%;
+        z-index: 9;
+        background-color: $antiflash-white;
+        border-right: 1px solid $raisin-black;
+      }
+      button {
+        flex: 1;
+        justify-content: center;
+        padding: 4px;
+        height: 100%;
+        outline: none;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 50%;
+        width: 10%;
+        scale: 1.2;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+        border-radius: 0;
+          scale: 1;
+          background-color: $bittersweet;
+        }
+        img {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+
+    .prevLocations {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 30px;
+      p {
+        text-align: start;
+        color: $antiflash-white;
+        width: 50%;
+      }
+      .locations {
+        gap: 50px;
+        margin: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+.centered {
+  display: flex;
+
+  align-items: center;
+}
+
+@media (max-width:45em) {
+  header {
+   
+    nav {
+      justify-content: center;
+      z-index: 99;
+      width: 100%;
+      padding: 10px 50px;
+      margin-bottom: 100px;
+      justify-content: space-between;
+      .logo {
+        user-select: none;
+        img {
+          height: 50px;
+      
+        }
+        span {
+          display: none;
+        }
+      }
+  
+      .local {
+        
+        img {
+          height: 200%;
+          rotate: -30deg;
+        }
+        span {
+          font-size: 18px;
+          font-weight: 200;
+          &::first-letter {
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+    .inputLocation {
+      width: 100%;
+      justify-content: center;
+      flex-direction: column;
+      .input {
+        height: 50px;
+        width: 90%;
+   
+        button {
+         
+          img {
+            height: 20px;
+            width: 20px;
+          }
+        }
+      }
+  
+      .prevLocations {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+        p {
+          width: 80%;
+          margin-left: 20px;
+        }
+    
+      }
+    }
+  }
+  
+}
+
