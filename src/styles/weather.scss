@@ -7,8 +7,8 @@ $vivid-sky-blue: #57c4e5ff;
 .weather-container {
   height: fit-content;
   width: 100%;
-  border-top: 20px solid $vivid-sky-blue;
-  border-bottom: 20px solid $vivid-sky-blue;
+  border-top: 10px solid $vivid-sky-blue;
+  border-bottom: 10px solid $vivid-sky-blue;
   --color: #f97068ff;
   background-color: #f97068ff;
   background-color: $antiflash-white;
@@ -42,6 +42,7 @@ $vivid-sky-blue: #57c4e5ff;
   justify-content: center;
   align-items: center;
   box-sizing: border-box; // Ensure padding is included in the height
+
 
   // Enable scroll snapping
   scroll-snap-align: start;
@@ -101,5 +102,41 @@ $vivid-sky-blue: #57c4e5ff;
       box-shadow: $vivid-sky-blue 6px 2px 16px 0px,
         $bittersweet -6px -2px 16px 0px;
     }
+
+    .weatherImg{
+      filter: contrast(.5),;
+      height: 40px;
+    }
   }
 }
+
+@media (max-width:50em) {
+  .weather-container {
+padding: 10px;
+  .weather-card {
+    margin: 30px 0;
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    background: #ffffff00;
+    border-radius: 4px;
+    box-shadow: #32325d40 0px 50px 100px -20px, #0000004d 0px 30px 60px -30px,
+      #0a254059 0px -2px 6px 0px inset;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    width: 100%;
+
+    .myLocation {
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: capitalize;
+      width: 100%;
+      margin: 10px;
+      color: $raisin-black;
+      text-transform: uppercase;
+      text-decoration: underline;
+    }
+  }
+}}

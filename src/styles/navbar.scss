@@ -6,16 +6,15 @@ $vivid-sky-blue: #57c4e5ff;
 
 header {
   width: 100%;
-  height: fit-content;
-  // min-height: 100vh;
+  height: 100vh;
   flex-direction: column;
-  // justify-content: center;
-  
+  justify-content: space-between;
   object-fit: fill;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   scroll-snap-align: start;
+
 
 
   &::before {
